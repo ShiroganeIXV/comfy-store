@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 /*
 =============== 
-Variables
+- Global CSS variables
+Once a variable is defined, it can be used elsewhere in the CSS 
+file by referencing its name with the `var()` function.
 ===============
 */
 
@@ -57,7 +59,7 @@ Global Styles
 ::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;   /* the width and height properties include the content, padding, and border, but not the margin.  */
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -199,7 +201,7 @@ Navbar
 .toggle-nav {
   background: var(--clr-primary-5);
   border-color: transparent;
-  color: var(--clr-white);
+  color: var(--clr-white); /*Color of the icon */
   width: 3.75rem;
   height: 2.25rem;
   display: flex;
@@ -290,8 +292,9 @@ Hero
 .hero {
   min-height: 100vh;
   margin-top: -6rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(./images/main-bcg.jpeg) center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  /* overlays the background image with a linear gradient*/
+    url(./images/main-bcg.jpeg) center/cover; /* "center" value positions the background image at the center of the element
+                                                  "cover" scales the image as large as possible without stretching it, while maintaining its aspect ratio*/
   display: grid;
   place-items: center;
   color: var(--clr-white);
@@ -401,7 +404,7 @@ Sidebar
 @media screen and (min-width: 800px) {
   .sidebar-overlay {
     display: none;
-  }
+  } /* media query that applies the styles enclosed in its block only when the viewport (the visible area of the web page on the screen) is 800 pixels wide or wider.*/
 }
 /*
 =============== 
