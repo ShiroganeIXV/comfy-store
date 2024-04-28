@@ -1,5 +1,5 @@
 // global imports
-import './src/toggleSidebar.js';
+import './src/toggleSidebar.js'; // import whole file with out any specific export
 import './src/cart/toggleCart.js';
 import './src/cart/setupCart.js';
 // specific imports
