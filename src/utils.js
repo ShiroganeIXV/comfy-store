@@ -17,7 +17,13 @@ const getElement = (selection) => {
   );
 };
 
-const formatPrice = () => {
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
+const formatPrice = (price) => {
+  let formattedPrice = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  }).format((price / 100).toFixed(2));
+  return formattedPrice;
  
 };
 
